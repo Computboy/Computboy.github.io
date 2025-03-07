@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+        nav {
+            width: 250px;
+            background: #2c3e50;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        nav h2 {
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #34495e;
+        }
+        .content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+        .section {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 左侧导航栏 -->
+    <nav>
+        <h2>My Portfolio</h2>
+        <a onclick="showSection('about')">📄 个人简介</a>
+        <a onclick="showSection('projects')">💼 项目展示</a>
+        <a onclick="showSection('contact')">📧 联系我</a>
+    </nav>
+
+    <!-- 右侧内容区 -->
+    <div class="content">
+        <div id="about" class="section active">
+            <h1>📄 个人简介</h1>
+            <p>TO BE CONTINUED.......</p>
+        </div>
+
+        <div id="projects" class="section">
+            <h1>💼 项目展示</h1>
+            <ul>
+                <li><strong>8-to-1 多路复用器</strong> - 使用 Verilog 实现并在 Verilator 上仿真</li>
+                <li><strong>智能推荐系统</strong> - 基于协同过滤算法的个性化推荐</li>
+            </ul>
+        </div>
+
+        <div id="contact" class="section">
+            <h1>📧 联系我</h1>
+            <p>GitHub: <a href="https://github.com/Computboy" target="_blank">Computboy</a></p>
+            <p>Email: your@email.com</p>
+        </div>
+    </div>
+
+    <!-- 切换内容的脚本 -->
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
