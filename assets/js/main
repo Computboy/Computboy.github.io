@@ -36,10 +36,14 @@ navItems.forEach(item => {
 
 // 显示/隐藏子菜单
 function toggleSubMenu(event, itemTitle) {
-    event.preventDefault(); // 防止跳转到链接
-
+    event.preventDefault();
     const submenu = document.getElementById(`${itemTitle}-submenu`);
-    // 切换子菜单的显示与隐藏
+    
+    // 关闭其他打开的菜单
+    document.querySelectorAll('.sub-menu').forEach(menu => {
+        if (menu !== submenu) menu.classList.remove('show');
+    });
+    
     submenu.classList.toggle('show');
 }
 
@@ -57,7 +61,12 @@ async function loadContent(filename) {
         const mdText = await response.text();
         const htmlContent = marked.parse(mdText); // 使用 marked.js 库将 Markdown 转换为 HTML
         document.getElementById('main-content').innerHTML = htmlContent;
-        generateTOC(); // 生成右侧索引
+        document.querySelectorAll('h2, h3').forEach((heading, index) => {
+        if (!heading.id) {
+            heading.id = `heading-${index}`;
+        }
+        });
+        generateTOC();
     } catch (error) {
         console.error(`Failed to load content: ${error.message}`);
         document.getElementById('main-content').innerHTML = `<p>加载内容失败: ${error.message}</p>`;
@@ -77,3 +86,9 @@ function generateTOC() {
         toc.appendChild(link);
     });
 }
+
+// 页面加载完成后自动初始化
+window.addEventListener('DOMContentLoaded', () => {
+    loadContent('home.md'); // 加载默认内容
+    generateTOC(); // 初始化右侧索引
+});

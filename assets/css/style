@@ -1,9 +1,20 @@
 /* 三栏布局 */
+
 body {
     display: grid;
     grid-template-columns: 200px 1fr 250px;
+    grid-template-areas: 
+        "sidebar content toc"
+        "footer footer footer";
     min-height: 100vh;
+    margin: 0; /* 新增：移除默认边距 */
 }
+
+.sidebar { grid-area: sidebar; }
+.content { grid-area: content; }
+.toc { grid-area: toc; }
+.comment-box { grid-area: footer; }
+
 
 .sidebar {
     background: #8781ee;
@@ -35,14 +46,15 @@ body {
     }
 }
 
-/* 隐藏子菜单 */
+/* 替换原来的子菜单样式 */
 .sub-menu {
-    display: none;
     list-style-type: none;
     padding-left: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
-/* 鼠标悬停时显示子菜单 */
-nav ul li:hover .sub-menu {
-    display: block;
+.sub-menu.show {
+    max-height: 500px; /* 根据实际内容调整 */
 }
