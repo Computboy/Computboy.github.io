@@ -18,6 +18,8 @@ body {
     height: 100%;
     padding-top: 20px;
     box-sizing: border-box;
+    overflow-y: auto; /* 确保长内容可滚动 */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* 添加右侧阴影增强层次 */
 }
 
 #nav-list {
@@ -48,6 +50,9 @@ body {
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
+    min-height: calc(100vh - 60px); /* 留出页脚空间 */
+    padding-bottom: 60px; /* 防止内容被页脚遮挡 */
+
 }
 
 footer {
