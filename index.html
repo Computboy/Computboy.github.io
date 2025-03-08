@@ -1,39 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>ComputBoy's Site</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Markdown 解析库 -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-</head>
+<!DOCTYPE html>  <!--comment-->
+<html lang="zh">  <!--language-->
+    <head>
+        <meta charset="UTF-8">  <!--character suuport-->
+        <meta name="viewport" content="width=device-width,initial-scale-1.0">  <!--moblie device support-->
 
-<body>
-    <!-- 左侧导航栏 -->
-    <nav class="sidebar">
-        <ul id="nav-list">
-            <!-- 通过 JS 动态加载导航项 -->
-        </ul>
-    </nav>
+        <!--css document -->
+        <!--Markdown parsing library-->
+    </head>
+    <body>
+        <header>  <!--title or introduction of the website-->
+            <h1>欢迎来到Computboy的个人网站!</h1>  <!--tab bar of the browser-->
+            <nav>
+                <ul>
+                    <li><a href="#home">主界面</a></li>  <!-- "href" switch to the part of the page(under this)-->
+                    <li><a href="#instruction">网站搭建指南</a></li>
+                    <li><a href="#projects">我的项目</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- 中间内容区 -->
-    <!-- 在 <main> 标签中添加加载提示 -->
-    <main class="content" id="main-content">
-        <div class="loading">Loading...</div>
-    </main>
+        <main>  <!--main content of this website-->
+            <section id="home">
+                <h2>主界面</h2>
+                <p>本网站主要囊括以下内容：</p>  <!-- <p> demonstrates the words i want to showcase -->
+            </section>
 
-    <!-- 右侧索引栏 -->
-    <aside class="toc" id="toc-sidebar">
-        <!-- 目录索引将通过 JS 动态生成 -->
-    </aside>
+            <section id="instruction">
+                <h2>网站搭建指南</h2>
+                <p>新手小白如何从零到一搭建一个属于自己的Github Pages静态网站?</p>
+            </section>
 
-    <!-- 底部评论框 -->
-    <footer class="comment-box">
-        <textarea placeholder="（项目建设中...敬请期待...）"></textarea>
-        <button onclick="submitComment()">无</button>
-    </footer>
+            <section id="projects">
+                <h2>我的项目</h2>
+                <p>各类报告，学术笔记，经验分享……甚至还有作品集！</p>
+            </section>
 
-    <script src="assets/js/main.js"></script>
-</body>
+        </main>
 
+        <footer>
+            <p>&copy; 2025 Computboy | 版权所有</p>
+        </footer>
+
+        <!--js document-->
+
+    </body>
 </html>
