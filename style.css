@@ -1,86 +1,67 @@
-/* 全局样式 */
+/* 基本页面布局样式 */
 body {
-    font-family: Arial, sans-serif; /* 设置全局字体 */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* 背景色 */
-    color: #333; /* 字体颜色 */
 }
 
-/* 页头样式 */
-header {
-    background-color: #4CAF50; /* 页头背景色 */
-    color: white; /* 页头文字颜色 */
+/* 页面头部样式 */
+.header {
+    background-color: #1b3c71;
+    color: white;
     padding: 20px;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em; /* 字体大小 */
+/* 左侧导航栏样式 */
+nav.sidebar {
+    width: 250px; /* 宽度 */
+    background-color: #255198; /* 背景色 */
+    color: white; /* 字体颜色 */
+    position: fixed; /* 固定在左侧 */
+    height: 100vh; /* 高度占满整个屏幕 */
+    top: 0;
+    left: 0;
+    padding-top: 20px;
 }
 
-/* 导航栏样式 */
-nav ul {
-    list-style-type: none; /* 去除列表的圆点 */
+nav.sidebar ul {
+    list-style-type: none; /* 去掉默认的列表样式 */
     padding: 0;
-    text-align: center;
+    margin: 0;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 20px; /* 每个导航项之间的间距 */
+nav.sidebar ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #444;
 }
 
-nav ul li a {
-    text-decoration: none; /* 去除链接下划线 */
-    color: white; /* 链接文字颜色 */
+nav.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
     font-size: 1.2em;
 }
 
-nav ul li a:hover {
-    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+nav.sidebar ul li a:hover {
+    background-color: #444; /* 悬停效果 */
 }
 
-/* 主体内容样式 */
-main {
+/* 主要内容区样式 */
+main.content {
+    margin-left: 270px; /* 给左侧导航栏留出空间 */
     padding: 20px;
-    max-width: 1000px;
-    margin: 20px auto;
-    background-color: white; /* 内容区域背景色 */
-    border-radius: 8px; /* 圆角效果 */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    background-color: #f4f4f4;
+    min-height: 100vh;
 }
 
-main h2 {
-    font-size: 1.8em;
-    color: #4CAF50; /* 标题颜色 */
-}
-
-main p {
-    font-size: 1em;
-    line-height: 1.6; /* 行高 */
-}
-
-/* 页脚样式 */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%; /* 固定在底部 */
-}
-
-/* 响应式设计：手机屏幕适配 */
-@media screen and (max-width: 768px) {
-    nav ul li {
-        display: block; /* 将导航项改为纵向排列 */
-        margin: 10px 0;
+/* 屏幕宽度大于768px时 */
+@media (max-width: 768px) {
+    nav.sidebar {
+        width: 200px; /* 调整导航栏宽度 */
     }
 
-    main {
-        padding: 10px;
+    main.content {
+        margin-left: 220px; /* 给导航栏留出空间 */
     }
 }
