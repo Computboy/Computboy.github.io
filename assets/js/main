@@ -49,11 +49,19 @@ function toggleSubMenu(event, itemTitle) {
 
 // 加载 Markdown 内容
 async function loadContent(filename) {
-    const response = await fetch(`assets/content/${filename}`);
-    const mdText = await response.text();
-    const htmlContent = marked.parse(mdText); // 使用 marked.js 库将 Markdown 转换为 HTML
-    document.getElementById('main-content').innerHTML = htmlContent;
-    generateTOC(); // 生成右侧索引
+    try {
+        const response = await fetch(`assets/content/${filename}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const mdText = await response.text();
+        const htmlContent = marked.parse(mdText); // 使用 marked.js 库将 Markdown 转换为 HTML
+        document.getElementById('main-content').innerHTML = htmlContent;
+        generateTOC(); // 生成右侧索引
+    } catch (error) {
+        console.error(`Failed to load content: ${error.message}`);
+        document.getElementById('main-content').innerHTML = `<p>加载内容失败: ${error.message}</p>`;
+    }
 }
 
 // 生成右侧标题索引
