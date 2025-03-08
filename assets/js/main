@@ -10,11 +10,15 @@ const navItems = [
     }
 ];
 
+// 获取导航栏元素
 const navList = document.getElementById('nav-list');
+
+// 动态生成导航栏
 navItems.forEach(item => {
     const li = document.createElement('li');
+    
     if (item.subItems) {
-        // 如果是项目项，添加下拉菜单
+        // 如果是有子项的项目
         li.innerHTML = `
             <a href="#" onclick="toggleSubMenu(event, '${item.title}')">${item.title}</a>
             <ul class="sub-menu" id="${item.title}-submenu" style="display: none;">
@@ -30,19 +34,38 @@ navItems.forEach(item => {
     navList.appendChild(li);
 });
 
+// 显示/隐藏子菜单
 function toggleSubMenu(event, itemTitle) {
-    event.preventDefault(); // 防止跳转
+    event.preventDefault(); // 防止跳转到链接
 
     const submenu = document.getElementById(`${itemTitle}-submenu`);
-    const isVisible = submenu.style.display === 'block';
+    // 切换子菜单的显示与隐藏
+    submenu.classList.toggle('show');
+}
 
-    // 隐藏所有子菜单
-    document.querySelectorAll('.sub-menu').forEach(menu => {
-        menu.style.display = 'none';
+// 你可以添加以下CSS来处理显示/隐藏子菜单
+// .sub-menu { display: none; }
+// .sub-menu.show { display: block; }
+
+// 加载 Markdown 内容
+async function loadContent(filename) {
+    const response = await fetch(`assets/content/${filename}`);
+    const mdText = await response.text();
+    const htmlContent = marked.parse(mdText); // 使用 marked.js 库将 Markdown 转换为 HTML
+    document.getElementById('main-content').innerHTML = htmlContent;
+    generateTOC(); // 生成右侧索引
+}
+
+// 生成右侧标题索引
+function generateTOC() {
+    const headings = document.querySelectorAll('h2, h3');
+    const toc = document.getElementById('toc-sidebar');
+    toc.innerHTML = '<h3>索引</h3>';
+
+    headings.forEach(heading => {
+        const link = document.createElement('a');
+        link.href = `#${heading.id}`;
+        link.textContent = heading.textContent;
+        toc.appendChild(link);
     });
-
-    // 如果当前子菜单没有显示，则显示它
-    if (!isVisible) {
-        submenu.style.display = 'block';
-    }
 }
