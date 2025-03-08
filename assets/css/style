@@ -1,0 +1,48 @@
+/* 三栏布局 */
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background: #8781ee;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.toc {
+    background: #f8f9fa;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+    .sidebar, .toc {
+        display: none;
+    }
+}
+
+/* 隐藏子菜单 */
+.sub-menu {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+/* 鼠标悬停时显示子菜单 */
+nav ul li:hover .sub-menu {
+    display: block;
+}
