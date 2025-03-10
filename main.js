@@ -8,6 +8,6 @@ async function loadContent(filename) {  //定义函数loadContent
 }
 
 // 默认加载首页内容
-loadContent('/contents/home.html');
+loadContent('contents/home.html');
 
 //javascript文件在网页呈现中的本质其实就是函数的文件载体

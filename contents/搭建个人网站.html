@@ -377,7 +377,9 @@ code {
 <p>本文采用Markdown格式编写，在尽可能简单的语法体系下实现较为完善的功能。具体操作详见页面底端：<a href="#%E9%99%84%E5%BD%95markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">附录</a>。</p>
 <p>本人才学尚浅，虽尽力而为但仍有疏漏，若遇讲述不当之处，烦请各位读者批评指正，给出指导建议！</p>
 <h2 id="%E4%BA%8C%E4%B8%80%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%9A%84%E7%BD%91%E7%AB%99%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88">二、一个基本的网站需要什么？</h2>
+
 <h3 id="1-htmlhypertext-markup-language">1. HTML（HyperText Markup Language）</h3>
+
 <ul>
 <li>作用：负责网页的结构和内容（如文本、图片、链接、按钮等）。</li>
 <li>是否必须？ 是，网页至少需要 HTML 文件 来定义页面的基本框架。</li>
@@ -396,29 +398,37 @@ code {
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </div></code></pre>
+
 <blockquote>
 <p>其实，从另一个层面上来讲，如果只想实现较为基础的功能，我们根本不需要学会HTML语法，只需要将你想展示的内容用Markdown语法描述，再用插件或其他快捷方式转化为HTML格式即可，具体在后文中都会有所提及，现只需初步了解。</p>
 </blockquote>
+
 <hr>
+
 <h3 id="2csscascading-style-sheets">2.CSS（Cascading Style Sheets）</h3>
 <ul>
 <li>作用：负责网页的样式和布局（如字体、颜色、间距、动画等）。</li>
 <li>是否必须？ 否，没有 CSS 也可以显示网页，但页面会显得非常简单、缺乏美观。</li>
 </ul>
+
 <hr>
+
 <h3 id="3javascript">3.JavaScript</h3>
+
 <ul>
 <li>作用：负责网页的交互行为（如表单验证、动态内容、动画、数据交互等）。</li>
 <li>是否必须？ 不是必须，如果只是展示静态页面，不需要 JavaScript。如果需要用户交互或动态效果，才需要用到 JavaScript。</li>
 </ul>
 <p>不过，虽然这篇文章旨在帮助新手快速搭建<strong>静态网站</strong>，但少量动画效果和交互属性的体现，无疑是给自己的网站锦上添花，因此，这部分内容也会做少量涉及，作为延拓。</p>
+
 <h2 id="%E9%99%84%E5%BD%95markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95">附录：Markdown基础语法</h2>
+
 <ul>
 <li>
-<p>Q: 我们能用什么来写.md类型的文件？</p>
+<p> Q: 我们能用什么来写.md类型的文件？</p>
 </li>
 <li>
-<p>A:任何文本编辑器都可以，甚至你可以选择系统自带的备忘录或者文本文档。<br>
+<p> A:任何文本编辑器都可以，甚至你可以选择系统自带的备忘录或者文本文档。<br>
 新手推荐使用Visual Studio Code，你可以在<a href="https://code.visualstudio.com/Download">Visual Studio Code官网界面</a>选取适配自己电脑系统的版本。该软件可以提供实时预览模式，有效防止编写markdown文件时，只能“颅内渲染”的窘境。</p>
 </li>
 </ul>
@@ -471,7 +481,9 @@ code {
 
 这是第二段。没有采用缩进。
 </div></code></pre>
+
 <h2 id="%E7%BB%8F%E6%B8%B2%E6%9F%93%E5%90%8E%E6%95%88%E6%9E%9C%E5%A6%82%E4%B8%8B%E6%89%80%E7%A4%BA">经渲染后，效果如下所示：</h2>
+
 <h3 id="1%E6%A0%87%E9%A2%98">1.标题：</h3>
 <p>“#” 的数量决定了标题的级别，“#”越多，代表标题层级越低。</p>
 <h3 id="2%E6%8D%A2%E8%A1%8C%E5%92%8C%E6%AE%B5%E8%90%BD">2.换行和段落：</h3>
