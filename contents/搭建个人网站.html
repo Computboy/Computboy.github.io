@@ -17,6 +17,14 @@ body {
 	padding: 0 26px;
 	line-height: var(--vscode-markdown-line-height, 22px);
 	word-wrap: break-word;
+    flex: 1; /* 占据剩余空间 */
+    max-width: 850px; /* 最大宽度，保证不超出 */
+    margin: 50px auto; /* 自动水平居中，上下有间距 */
+    padding: 40px; /* 内容内边距 */
+    background: white; /* 白色背景 */
+    border-radius: 16px; /* 圆角 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+
 }
 
 #code-csp-warning {
