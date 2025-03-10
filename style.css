@@ -15,10 +15,82 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */
 }
 
+/* 设置 body 基本样式，防止导航栏遮挡内容 */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex; /* 使用 flex 布局 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    background-color: #f9f9f9; /* 背景色 */
+}
+
+/* 左侧导航栏样式 */
+.sidebar {
+    width: 250px; /* 导航栏宽度 */
+    height: 100vh; /* 高度占满视口 */
+    background-color: #2c3e50; /* 导航栏背景色 */
+    position: fixed; /* 固定在左侧 */
+    left: 0;
+    top: 0;
+    padding-top: 20px; /* 顶部留白 */
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+}
+
+/* 导航栏列表样式 */
+.sidebar ul {
+    list-style-type: none; /* 移除列表符号 */
+    padding: 0;
+    margin: 0;
+}
+
+/* 导航项样式 */
+.sidebar ul li {
+    padding: 15px 20px; /* 导航项内边距 */
+}
+
+/* 导航链接样式 */
+.sidebar ul li a {
+    text-decoration: none; /* 去除下划线 */
+    color: white; /* 文字颜色 */
+    display: block; /* 链接填充整个 li 区域 */
+    transition: background 0.3s; /* 添加过渡动画 */
+}
+
+/* 鼠标悬停效果 */
+.sidebar ul li a:hover {
+    background-color: #34495e; /* 悬停时背景色变化 */
+}
+
+/* 内容区域样式，留出导航栏宽度 */
+.content {
+    margin-left: 250px; /* 避免被导航栏遮挡 */
+    padding: 20px; /* 内容区域的内边距 */
+}
+
+
 /* 适配小屏幕（如手机） */
 @media (max-width: 600px) {
     .content {
         max-width: 95%; /* 小屏幕时内容区域更窄 */
         padding: 10px;
+        margin-left: 0; /* 小屏幕不需要为导航栏留出空间 */
+        padding-top: 80px; /* 上方留白，避免导航栏遮盖内容 */
     }
+    /* 小屏幕下将导航栏移到顶部 */
+    /* 顶部导航栏样式 */
+    .sidebar {
+        width: 100%; /* 导航栏宽度为 100% */
+        height: auto; /* 自动高度 */
+        position: relative; /* 解除 fixed 固定定位，变为普通流 */
+        box-shadow: none; /* 移除阴影 */
+        background-color: #2c3e50; /* 保持原有背景色 */
+    }
+
+    /* 导航列表横向排列 */
+    .sidebar ul {
+        display: flex; /* 横向布局 */
+        justify-content: space-around; /* 平均分布导航项 */
+    }
+
 }
+
