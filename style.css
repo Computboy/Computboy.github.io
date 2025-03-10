@@ -18,7 +18,7 @@ body {
 /* 适配小屏幕（如手机） */
 @media (max-width: 600px) {
     .content {
-        max-width: 90%; /* 小屏幕时内容区域更窄 */
+        max-width: 95%; /* 小屏幕时内容区域更窄 */
         padding: 10px;
     }
 }
