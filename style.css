@@ -5,15 +5,7 @@ body {
     font-family: Arial, sans-serif; /* 设置字体 */
 }
 
-/* 核心：将内容居中并限制宽度 */
-.content {
-    max-width: 800px;          /* 设置内容最大宽度 */
-    margin: 50px auto;         /* 上下间距 50px，左右自动居中 */
-    padding: 20px;             /* 增加内边距 */
-    background: white;         /* 背景色 */
-    border-radius: 12px;       /* 可选：添加圆角 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */
-}
+
 
 /* 设置 body 基本样式，防止导航栏遮挡内容 */
 body {
@@ -32,7 +24,7 @@ body {
     position: fixed; /* 固定在左侧 */
     left: 0;
     top: 0;
-    padding-top: 20px; /* 顶部留白 */
+    padding-top: 200px; /* 顶部留白 */
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
 }
 
@@ -63,8 +55,13 @@ body {
 
 /* 内容区域样式，留出导航栏宽度 */
 .content {
-    margin-left: 250px; /* 避免被导航栏遮挡 */
-    padding: 20px; /* 内容区域的内边距 */
+    /* 核心：将内容居中并限制宽度 */
+    max-width: 800px;          /* 设置内容最大宽度 */
+    margin: 50px auto;         /* 上下间距 50px，左右自动居中 */
+    padding: 20px;             /* 增加内边距 */
+    background: white;         /* 背景色 */
+    border-radius: 12px;       /* 可选：添加圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */
 }
 
 
