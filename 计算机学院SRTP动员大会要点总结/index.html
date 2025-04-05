@@ -1,0 +1,765 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../2025%E6%98%A5-%E9%82%B9%E5%AE%81/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>SRTP项目介绍 - Computboy's First Site</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#srtp" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Computboy&#39;s First Site" class="md-header__button md-logo" aria-label="Computboy's First Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Computboy's First Site
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SRTP项目介绍
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Computboy&#39;s First Site" class="md-nav__button md-logo" aria-label="Computboy's First Site" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Computboy's First Site
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    网站首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    本科生科研项目(SRTP)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            本科生科研项目(SRTP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SRTP项目介绍
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    SRTP项目介绍
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#srtp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、SRTP简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、申报等级、人数限制和报销额度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、申报、项目流程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、经验总结
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、经验总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      （一）、选择课题和前期答辩阶段
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      （二）、中期科研阶段
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      （三）、结题阶段
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、一些问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、一些问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-srtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: SRTP项目如何进行定级？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-srtp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: 要不要报SRTP？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2025%E6%98%A5-%E9%82%B9%E5%AE%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025年春季SRTP项目
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#srtp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、SRTP简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、申报等级、人数限制和报销额度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、申报、项目流程
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      四、经验总结
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、经验总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      （一）、选择课题和前期答辩阶段
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      （二）、中期科研阶段
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      （三）、结题阶段
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      五、一些问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、一些问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-srtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: SRTP项目如何进行定级？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-srtp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q: 要不要报SRTP？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="srtp">计算机学院SRTP动员大会要点总结</h1>
+<h2 id="srtp_1">一、SRTP简介</h2>
+<ul>
+<li>
+<p>本科生科研训练计划（Student Research Training Program），是为在校本科生设计的一种科研项目资助计划。</p>
+</li>
+<li>
+<p>SRTP采取<strong>项目化的运作模式</strong>，通过设立创新资金和本科生自主申报的方式，确定立项并给予资金（少量）支持，鼓励学生在导师指导之下独立完成项目的研究。</p>
+</li>
+<li>
+<p>SRTP的核心是支持本科生开展科研训练，学生参与SRTP的过程本质上是在进行研究型学习，注重的是<strong>学生参与科学研究和相关方向前沿课题挖掘的学习过程</strong>，而并非期望本科生创造出多少研究型成果。</p>
+</li>
+<li>
+<p>SRTP为学有余力的同学创造了直接参与科研的机会和途径，引导学生通过发现问题、激发创新思维、独立完成课题等过程，积极探索全新的知识领域，从而体验到研究性学习的乐趣。</p>
+</li>
+</ul>
+<h2 id="_1">二、申报等级、人数限制和报销额度</h2>
+<table>
+<thead>
+<tr>
+<th>级别</th>
+<th>项目类别</th>
+<th style="text-align: left;">团队学生上限</th>
+<th>实施时间</th>
+<th>申报经费</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>国家级（国创）</td>
+<td>创新训练</td>
+<td style="text-align: left;">本科生，3人</td>
+<td>1年</td>
+<td>1.2万元</td>
+</tr>
+<tr>
+<td>省级（省创）</td>
+<td>科技创新</td>
+<td style="text-align: left;">本科生，3人</td>
+<td>1年</td>
+<td>1万元</td>
+</tr>
+<tr>
+<td>校级SRTP</td>
+<td>科研训练</td>
+<td style="text-align: left;">本科生，3人</td>
+<td>1年</td>
+<td>0.12万元</td>
+</tr>
+<tr>
+<td>院级SRTP</td>
+<td>科研训练</td>
+<td style="text-align: left;">本科生，3人</td>
+<td>1年</td>
+<td>院（系）自筹</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">三、申报、项目流程</h2>
+<ol>
+<li>
+<p><strong>系统填报</strong>：3月25日前（此为2025年SRTP填报截止时间，后续年份依具体情况而定），确认好选题、指导教师及合作成员后，项目负责学生登入<strong>本科生科研训练和学科竞赛管理系统</strong>（http://kyjs.zju.edu.cn/kyxl），统一身份认证账号进入系统，在导师的指导下认真仔细全面填写申请表内容，“所在学院（系）”栏目中务必填写项目负责学生所在的专业学院（系），未在网上申请和上传项目申请表，将不予审批，原则上每位导师最多指导三个项目。</p>
+</li>
+<li>
+<p><strong>纸质材料提交</strong>：3月27日（后续年份依具体情况而定）17:00前：提交签字版纸质申请表一式一份（全体成员、导师签字），紫金港交至：西一413，李老师，88206140。</p>
+</li>
+<li>
+<p><strong>（开题）立项评审</strong>：暂定于3月28日下午13:30（后续年份依具体情况而定）在紫金港校区进行立项评审，学生<strong>制作PPT进行答辩</strong>，答辩安排另行通知。4月7日前评审结果公示上报。</p>
+</li>
+<li>
+<p><strong>（中期）汇报检查</strong>：同年11月份学院将组织进行中期检查。学生需填写中期检查表，PPT现场汇报。中期检查成绩实行百分制，其中校级/院级SRTP中期成绩占整个SRTP的30％</p>
+</li>
+<li>
+<p><strong>（结束）结题与答辩</strong>：</p>
+</li>
+<li>1）时间：次年5月份</li>
+<li>2）方式：填写结题表，上传成果材料，PPT汇报，实行末位审核制。</li>
+<li>3）成绩：优秀、良好、中等、合格、不合格。</li>
+</ol>
+<h2 id="_3">四、经验总结</h2>
+<h4 id="_4">（一）、选择课题和前期答辩阶段</h4>
+<ul>
+<li>提前了解选择的方向，阅读相关领域的前沿论文，判断自己对该方面是否感兴趣。</li>
+<li>确认方向之后，阅读文献，对该课题有基本的了解。</li>
+<li>和导师进行联系，在导师指导下（例如参考资料等）自主学习，补充大量相关知识。</li>
+<li>
+<p>注意：科学研究和课程学习的差别非常大；课堂中的学习，知识体系一般都非常完善，跟着教程一步步进行学习即可；而在科研学习中，只是较为前言，知识点比较散，无法特别直截了当地呈现自己所需的知识，需要<strong>边做科研边学习</strong>。</p>
+</li>
+<li>
+<p>开题答辩：摆明态度+展示对该项目的了解程度以及日后明确的规划。</p>
+</li>
+<li>制作一份精美的演示文稿（漂亮的皮囊）</li>
+<li>详尽地阐述课题的方向，以及自身对于该项目的理解和预期成果</li>
+<li>具体言语可以用故事串联：背景——现有方法的局限性或问题——我们的创新点——应用前景</li>
+<li>答辩不是汇报，而是要讲好一个解决问题的故事</li>
+</ul>
+<h4 id="_5">（二）、中期科研阶段</h4>
+<ul>
+<li>制定任务表，定期和导师/学长学姐开会评论进度，不要拖延。</li>
+<li>和学长学姐讨论明确想要尝试的技术路线，要做的实验等等，并咨询其反馈。</li>
+<li>积极寻找导师/学长学姐讨论想法和当前科研进展，遇到问题大胆提问，<strong>比自己盲目试错的效率要高得多。</strong></li>
+<li><strong>做好实验失败的准备：</strong>科研不同于日常课堂学习，没有明确的方法或结果，只能通过时间和路径的堆砌，分析实验受阻的缘由，从而对当前思路或方向进行改进。</li>
+<li>高效沟通：和导师汇报提前列好成果大纲或制作PPT，展示最近完成的工作。</li>
+</ul>
+<h4 id="_6">（三）、结题阶段</h4>
+<ul>
+<li>整理和评估实验结果。</li>
+<li>结题答辩Demo制作。</li>
+</ul>
+<h2 id="_7">五、一些问题</h2>
+<h4 id="q-srtp">Q: SRTP项目如何进行定级？</h4>
+<ol>
+<li>一个是带你项目的导师，一方面有一些导师在学院里面有点名气，比如院长（大概率只给你挂名）、所长之类的或者比较德高望重，如果他带的几组srtp，大概率会有至少一组国创省创（但一般不会全部都是）。另一方面如果导师每年都带好几组srtp，那大概率相对来说也会有点经验，大概率也会有部分能拿到国创省创。而且还有一个点，一些学院每年的答辩老师其实都大差不差，因为主要还是学院教学科组织联系，哪些老师比如脾气好愿意来这种当答辩评委或者比较关心学院教育教学，哪些老师平时很忙比较爱答不理，教学科他们心知肚明，所以每年都会去联系这些老师当评委。所以哪些老师每年会带好几组srtp，负不负责会不会自己亲力亲为带，最后结果看起来怎么样，评委老师心里都大致有数。</li>
+<li>课题是否有足够的<strong>“价值”</strong>，所谓的价值不仅仅是实际价值，还有“展示”价值，就是最后把你这个题目公之于众，会不会让人眼前一亮，一看就觉得这个课题很有意义（比如一些比较热门的方向），毕竟这些所谓省创国创最后都要上报学校然后公示，不能丢人；还有你这个课题会不会太水，会不会太大（一年时间做不完）；还有你开题答辩的时候的“讲故事”的能力，能否说动评委老师，觉得你这个课题很有东西，可行性很高等等…… </li>
+</ol>
+<h4 id="q-srtp_1">Q: 要不要报SRTP？</h4>
+<ul>
+<li>
+<p>A1：报名的意义——首先有实力有志向的同学，很有毅力立志于做出成果的人，无论有没有这个srtp，最后他都能靠自己的努力发出文章，毋庸置疑，但是众所周知，这只是少数人，对于大部分人来说，srtp都是水水的做不出啥东西，自己联系老师进实验室跟了一段时间发现老师有问题换一个或者太忙了不主动一段时间就不了了之…许多人都是没啥成果的，或者最后就混合二三作之类的。 所以呢，报srtp一个好处就是<strong>可以让你至少坚持一年去完成这个一个课题</strong>，也许他是实验室的一个小问题，也许是硕博的打工仔，也许是导师拍脑袋想出来的题目，但是至少你能够完整的体会到<strong>开题--中期--结题这样实际做完一个课题的感觉</strong>（当然你后面本科毕设，硕士博士毕业都会体验这个过程），这个科研项目能够push坚持你花费一年的时间去完成这样一个东西，如果没有这样一个规则，可能你做一半就因为种种原因放弃了（当然你很有毅力就另当别论了），也能体会到科研的过程，能够<strong>知晓自己到底是否适合科研</strong>。如果合适后面你还可以继续做下去当做毕设的内容，毕设工作量会少很多。 以后读硕博也都需要开题中期结题这样一个过程，现在srtp一年说长不长，很难真的做出什么实际东西（大部分都是临了糊了一个“成果”上去），说短也不短，毕竟本科就四年这个就占了一年，毕设也要占了快一年，去体验一下，多一段经历，<strong>保研的时候评奖评优的时候都可以说出来，也是不错的一段科研经历</strong>。</p>
+</li>
+<li>
+<p>A2：报名其实没有太大的意义。</p>
+</li>
+<li>首先是关于题目本身的价值，SRTP的题目的来源有几种糟糕的可能性：实验室有些需要做解决的小问题/导师手下博士生需要搬砖帮忙的/导师应付学院指标要求一拍脑袋想出几个不完善或者大而空的题目。而lz的情况不是已经很明显了吗？老师都不想带srtp，为什么还要坚持srtp这种形式呢？我不太清楚<strong>“做出一些东西”</strong>和<strong>坚持走srtp这个形式</strong>之间有什么必然联系。</li>
+<li>各个成员之间的步调是否能一致问题。作为一个过来人，我觉得这个问题对我来说是最致命的问题。每个人愿意在一个项目上投入的精力、对待认真的程度和见识、能力是不同的，想找到默契、合适、同频的队友比找到合适的题目还难。</li>
+<li>形式、流程繁琐。SRTP有很多和做事情本身无关的流程，包括答辩（做PPT给几个可能都不怎么懂的人讲你的项目）、写科研记录等。从社会的角度来说，国创省创完全是student toy（学生的玩具，意为非常小儿科的东西），如果你能申一个本科国自然，那是真正履历上多了浓墨重彩的一笔。在这种情况之下，赶着当srtp这个评价体系中的好学生，就完全没必要了。</li>
+<li>简单来说，我们可以趁早向老师表达所谓的<strong>想做点东西</strong>的想法，不要害怕在比你多了多年摸爬滚打阅历的人面前展现出强烈的目的性，这本身是一个双向成就的过程，多做些事情，展现出你的能力，再谈未来。至于所谓的国创省创，如果你的学院保研体系对这个有加分，你也觉得很重要，或许可以了解一下。我本人并不支持因为从众而走SRTP，如果你真的有强烈的兴趣和做事的决心，也没必要犹豫了。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
