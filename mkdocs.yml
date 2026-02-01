@@ -6,3 +6,6 @@ theme:
 
 nav:
   - Home: index.md
+
+extra_css:
+  - assets/css/extra.css
