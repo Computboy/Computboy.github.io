@@ -1,0 +1,8 @@
+site_name: Computboy个人静态网站
+site_url: https://Computboy.github.io/
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
