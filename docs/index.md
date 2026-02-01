@@ -36,8 +36,6 @@ Here I share my notes from the *Fundamentals of Intelligent Design* course, cove
 - Computer Vision in Design Prototype Evaluation
 - Reinforcement Learning for Product Structure Optimization
 
-You can find the full notes in the [Notes Repository](https://github.com/computboy/intelligent-design-notes) (replace with your actual link).
-
 ---
 
 ## 💪🏼 Skills
