@@ -2,10 +2,10 @@ site_name: Computboy个人静态网站
 site_url: https://Computboy.github.io/
 
 theme:
-  name: material
+  name: material   # material主题，对功能支持较好
   language: en   # 默认界面语言（按钮、提示等）
 
-nav:
+nav:  # 导航栏
   - Home: index.md
 
 extra_css:
@@ -20,7 +20,7 @@ plugins:
         zh: 中文
 
 extra:
-  alternate:
+  alternate:   # 切换按键
     - name: English
       link: /
       lang: en
