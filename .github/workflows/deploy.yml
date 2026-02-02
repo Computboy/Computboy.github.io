@@ -26,9 +26,10 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Install dependencies
+      - name: Install dependencies  # 安装依赖
         run: |
-          pip install mkdocs mkdocs-material
+          pip install mkdocs mkdocs-material mkdocs-material mkdocs-static-i18n
+
 
       - name: Build site
         run: mkdocs build --clean
