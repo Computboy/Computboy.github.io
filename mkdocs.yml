@@ -23,7 +23,6 @@ plugins:
           name: 中文
           build: true
 
-
 extra:
   alternate:   # 切换按键
     - name: English
