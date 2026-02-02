@@ -3,6 +3,7 @@
 ## 😌 About Me
 I'm a student at **Zhejiang University** majoring in **Industrial Design**. My work focuses on the intersection of design and technology, exploring how computer graphics and artificial intelligence can create more intelligent and visually engaging product experiences.
 
+
 ### Academic Interests
 - **Computer Graphics & Real-Time Rendering**
 - **Technical Art & Photorealistic Rendering**
@@ -50,7 +51,6 @@ Here I share my notes from the **Fundamentals of Intelligent Design** course, co
 ## Contact Me
 - Email: wel_sun@zju.edu.cn
 - GitHub: github.com/Computboy
-
 
 
 *Last updated: February 2026*

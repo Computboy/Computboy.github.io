@@ -3,9 +3,18 @@ site_url: https://Computboy.github.io/
 
 theme:
   name: material
+  language: en   # 默认界面语言（按钮、提示等）
 
 nav:
   - Home: index.md
 
 extra_css:
   - assets/css/extra.css
+
+plugins:
+  - search
+  - i18n:
+      default_language: en
+      languages:   # 语言切换
+        en: English
+        zh: 中文
