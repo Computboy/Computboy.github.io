@@ -18,3 +18,12 @@ plugins:
       languages:   # 语言切换
         en: English
         zh: 中文
+
+extra:
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: 中文
+      link: /zh/
+      lang: zh
