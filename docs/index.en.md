@@ -30,7 +30,7 @@ I'm a student at **Zhejiang University** majoring in **Industrial Design**. My w
 ---
 
 ## Course Notes & Technical Sharing
-### Fundamentals of Intelligent Design
+### **Fundamentals of Intelligent Design**
 Here I share my notes from the **Fundamentals of Intelligent Design** course, covering core AI algorithms applied to design scenarios:
 
 - Introduction to Generative AI in Product Design
