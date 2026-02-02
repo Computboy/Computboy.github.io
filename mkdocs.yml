@@ -15,9 +15,11 @@ plugins:
   - search
   - i18n:
       default_language: en
-      languages:   # 语言切换
-        en: English
-        zh: 中文
+      languages:
+        - locale: en
+          name: English
+        - locale: zh
+          name: 中文
 
 extra:
   alternate:   # 切换按键
