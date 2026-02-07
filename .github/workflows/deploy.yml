@@ -26,10 +26,9 @@ jobs:
         with:
           python-version: "3.x"
 
-      # - name: Install dependencies  # 安装依赖
-      #   run: |
-      #     pip install mkdocs mkdocs-material mkdocs-material mkdocs-static-i18n
-      #     main分支中暂时抛弃多语言切换功能
+      - name: Install dependencies  # 安装依赖
+        run: |
+          pip install mkdocs mkdocs-material
 
       - name: Build site
         run: mkdocs build --clean
