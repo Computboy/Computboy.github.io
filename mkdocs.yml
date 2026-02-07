@@ -3,31 +3,10 @@ site_url: https://Computboy.github.io/
 
 theme:
   name: material   # material主题，对功能支持较好
-  language: en   # 默认界面语言（按钮、提示等）
+  language: zh   # 默认界面语言（按钮、提示等）
 
 nav:  # 导航栏
   - Home: index.md
 
 extra_css:
   - assets/css/extra.css
-
-plugins:
-  - search
-  - i18n:
-      languages:
-        - locale: en
-          name: English
-          default: true
-          build: true
-        - locale: zh
-          name: 中文
-          build: true
-
-extra:
-  alternate:   # 切换按键
-    - name: English
-      link: /
-      lang: en
-    - name: 中文
-      link: /zh/
-      lang: zh
