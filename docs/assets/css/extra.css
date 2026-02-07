@@ -1,27 +1,22 @@
 @font-face {
-  font-family: "TsangErKai";
-  src: url("../fonts/TsangEr-W02.woff2") format("woff2");
+  font-family: "XiawuWenkai";
+  src: url("../fonts/LXGWWenKai-Light.woff2") format("woff2");
   font-weight: 300;
 }
 @font-face {
-  font-family: "TsangErKai";
-  src: url("../fonts/TsangEr-W03.woff2") format("woff2");
+  font-family: "XiawuWenkai";
+  src: url("../fonts/LXGWWenKai-Regular.woff2") format("woff2");
   font-weight: 400;
 }
 @font-face {
-  font-family: "TsangErKai";
-  src: url("../fonts/TsangEr-W04.woff2") format("woff2");
+  font-family: "XiawuWenkai";
+  src: url("../fonts/LXGWWenKai-Medium.woff2") format("woff2");
   font-weight: 500;
-}
-@font-face {
-  font-family: "TsangErKai";
-  src: url("../fonts/TsangEr-W05.woff2") format("woff2");
-  font-weight: 600;
 }
 
 /* 全站替换字体 */
 :root {
-  --md-text-font: "TsangErKai", "Noto Serif SC", serif;
+  --md-text-font: "XiawuWenkai", "Noto Serif SC", serif;
   --md-code-font: "JetBrains Mono", monospace;
 }
 
