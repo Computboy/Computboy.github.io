@@ -19,12 +19,118 @@
   font-weight: 600;
 }
 
-/* 全站替换字体 */
+/* =========================
+   Global font system
+   ========================= */
 :root {
-  --md-text-font: "TsangErKai", "Noto Serif SC", serif;
-  --md-code-font: "JetBrains Mono", monospace;
+  --md-text-font: "Inter", "Noto Sans SC", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --md-code-font: "JetBrains Mono", "Fira Code", monospace;
+  --site-accent-font: "TsangErKai", "Noto Serif SC", serif;
 }
 
-body {
+/* 全站基础字体：改成更现代、更技术向 */
+html,
+body,
+.md-typeset,
+.md-nav,
+.md-header,
+.md-tabs,
+.md-search,
+.md-footer {
   font-family: var(--md-text-font);
+}
+
+/* 正文阅读体验 */
+.md-typeset {
+  font-weight: 400;
+  line-height: 1.78;
+  letter-spacing: 0.01em;
+  text-rendering: optimizeLegibility;
+}
+
+/* 标题更利落一点，减少“软萌感” */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: var(--md-text-font);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+/* 首页主标题稍微更有学术主页感 */
+.md-typeset h1 {
+  font-size: 2.1em;
+  margin-bottom: 1.2rem;
+}
+
+.md-typeset h2 {
+  font-size: 1.45em;
+  margin-top: 2.2rem;
+  margin-bottom: 0.9rem;
+}
+
+.md-typeset h3 {
+  font-size: 1.15em;
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+/* 导航、目录、站点标题统一更专业 */
+.md-header__title,
+.md-nav__title,
+.md-nav__link,
+.md-tabs__link,
+.md-search__input {
+  font-family: var(--md-text-font);
+  font-weight: 500;
+}
+
+/* 顶部站点名称稍微增强识别度 */
+.md-header__title {
+  letter-spacing: 0;
+}
+
+/* 侧边目录不要太轻 */
+.md-nav--secondary .md-nav__link {
+  font-weight: 450;
+}
+
+/* 段落与列表间距更舒服 */
+.md-typeset p,
+.md-typeset ul,
+.md-typeset ol {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+/* 列表更适合技术主页 */
+.md-typeset li {
+  margin-bottom: 0.35em;
+}
+
+/* 粗体别太黑，避免显得笨重 */
+.md-typeset strong {
+  font-weight: 600;
+}
+
+/* 代码字体 */
+code,
+kbd,
+pre {
+  font-family: var(--md-code-font);
+}
+
+/* 表格文字也统一 */
+table,
+th,
+td {
+  font-family: var(--md-text-font);
+}
+
+.accent-font {
+  font-family: var(--site-accent-font);
 }

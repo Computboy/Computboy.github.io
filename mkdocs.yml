@@ -3,7 +3,7 @@ site_url: https://Computboy.github.io/
 
 theme:
   name: material   # material主题，对功能支持较好
-  language: zh   # 默认界面语言（按钮、提示等）
+  language: en   # 默认界面语言（按钮、提示等）
 
 nav:  # 导航栏
   - Home: index.md
