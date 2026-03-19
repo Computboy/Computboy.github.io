@@ -52,42 +52,43 @@ I am especially interested in building interactive systems that combine **visual
 
 ### 02 | OpenGL-Based Real-Time 3D Scene Rendering Editor
 
-- **Project Goal:**  
-  Designed and implemented a lightweight 3D scene editing and rendering system (a mini editor / mini engine) for course projects and demonstration purposes.  
-  The system was intended to support:
+#### **Project Goal:**  
+Designed and implemented a lightweight 3D scene editing and rendering system (a mini editor / mini engine) for course projects and demonstration purposes.  
+The system was intended to support:
 
-  1. Scene construction and interactive editing within one program, including object placement, transformation, and parameter adjustment;  
-  2. A stable **real-time rendering viewport** with basic camera navigation;  
-  3. Visually convincing rendering effects such as lighting, shadows, materials, and textures while maintaining a clear and extensible system structure.
+1. Scene construction and interactive editing within one program, including object placement, transformation, and parameter adjustment;  
+2. A stable **real-time rendering viewport** with basic camera navigation;  
+3. Visually convincing rendering effects such as lighting, shadows, materials, and textures while maintaining a clear and extensible system structure.
 
 ![OpenGL-Project](assets/images/representation-of-openglscene.png)
 
-- **Technical Approach:**  
+#### **Technical Approach:**  
 
-  1. **Language and Graphics API:**  
-     Built in **C++** with **OpenGL** as the rendering backend, and implemented core visual effects using **GLSL shaders**, including per-pixel lighting, texture sampling, and shadow sampling.
+1. **Language and Graphics API:**  
+    Built in **C++** with **OpenGL** as the rendering backend, and implemented core visual effects using **GLSL shaders**, including per-pixel lighting, texture sampling, and shadow sampling.
 
-  2. **Editor Interface System:**  
-     Used **ImGui Docking** to build a multi-panel editor workflow, separating control panels, rendering viewport, and information/log windows.
+2. **Editor Interface System:**  
+    Used **ImGui Docking** to build a multi-panel editor workflow, separating control panels, rendering viewport, and information/log windows.
 
-  3. **Resource and Rendering Architecture:**  
-     Organized the system with layered **Model/Mesh abstractions**; used **Assimp** to load external mesh assets such as OBJ models; managed geometry data with **VAO/VBO**; and encapsulated texture binding and rendering states to improve robustness.
+3. **Resource and Rendering Architecture:**  
+    Organized the system with layered **Model/Mesh abstractions**; used **Assimp** to load external mesh assets such as OBJ models; managed geometry data with **VAO/VBO**; and encapsulated texture binding and rendering states to improve robustness.
 
-  4. **Interaction and Playability:**  
-     Added mouse-based interaction inside the viewport, including voxel placement and basic collision logic, enabling a simple explorable 3D maze-like scene.
+4. **Interaction and Playability:**  
+    Added mouse-based interaction inside the viewport, including voxel placement and basic collision logic, enabling a simple explorable 3D maze-like scene.
 
-- **Outcome:**  
-  Completed a functional prototype of a 3D scene editor with a full workflow from **scene construction** to **parameter tuning** and **visual presentation**:
+#### **Outcome:**
 
-  1. **Scene Content:**  
-     Supports both procedural voxel geometry generation (cube, sphere, cylinder, etc.) and external OBJ model import with multi-mesh rendering.
+Completed a functional prototype of a 3D scene editor with a full workflow from **scene construction** to **parameter tuning** and **visual presentation**:
 
-  2. **Rendering Capability:**  
-     Supports materials and textures, while allowing real-time adjustment of light sources and rendering parameters to observe changes in appearance directly.
+1. **Scene Content:**  
+    Supports both procedural voxel geometry generation (cube, sphere, cylinder, etc.) and external OBJ model import with multi-mesh rendering.
 
-  3. **Application Value:**  
-     The system can be used for graphics education, rendering pipeline demonstrations, assignment presentations, and rapid prototyping.  
-     It also provides a foundation for future expansion toward a more complete editor, simulation tool, or small game framework.
+2. **Rendering Capability:**  
+    Supports materials and textures, while allowing real-time adjustment of light sources and rendering parameters to observe changes in appearance directly.
+
+3. **Application Value:**  
+    The system can be used for graphics education, rendering pipeline demonstrations, assignment presentations, and rapid prototyping.  
+    It also provides a foundation for future expansion toward a more complete editor, simulation tool, or small game framework.
 
 ---
 
