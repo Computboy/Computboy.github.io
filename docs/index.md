@@ -3,7 +3,7 @@
 ## About Me
 
 I am an undergraduate student majoring in **Industrial Design** at the **College of Computer Science and Technology, Zhejiang University**.  
-My work focuses on the intersection of **design, computation, and intelligent systems**, with particular interests in **Computer Graphics**, **Computer Vision**, and **Artificial Intelligence**.
+My work focuses on the intersection of **computation, intelligent systems, Human-Computer Interaction**, with my particular interests in **Computer Graphics**, **Computer Vision**, and **Artificial Intelligence**.
 
 I am especially interested in building interactive systems that combine **visual computing**, **geometric understanding**, and **learning-based methods**, aiming to create digital experiences that are both technically robust and visually expressive.
 
@@ -28,7 +28,7 @@ I am especially interested in building interactive systems that combine **visual
 - **Zhejiang University** | B.Eng. in Industrial Design *(2024 – Present)*
 
   **Relevant Coursework:**  
-  Design Thinking, Fundamentals of Intelligent Design, Computer Graphics, Data Structures and Algorithms
+  Computer Graphics, Data Structures and Algorithms, Design Thinking, Fundamentals of Intelligent Design
 
 ---
 
@@ -59,6 +59,8 @@ I am especially interested in building interactive systems that combine **visual
   1. Scene construction and interactive editing within one program, including object placement, transformation, and parameter adjustment;  
   2. A stable **real-time rendering viewport** with basic camera navigation;  
   3. Visually convincing rendering effects such as lighting, shadows, materials, and textures while maintaining a clear and extensible system structure.
+
+![OpenGL-Project](assets/images/representation-of-openglscene.png)
 
 - **Technical Approach:**  
 
