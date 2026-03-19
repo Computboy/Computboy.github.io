@@ -36,17 +36,19 @@ I am especially interested in building interactive systems that combine **visual
 
 ### 01 | Companion Robot for Children
 
-- **Project Goal:**  
-  Based on the original Otto Basic platform, this project redesigned and upgraded the robot’s appearance, mechanical structure, and interaction logic to create a companion-oriented intelligent toy robot for children.
+#### **Project Goal:**
+Redesigned the original Otto Basic platform into a companion-oriented interactive robot for children, with a focus on friendlier form, expressive behavior, and responsive interaction.
 
-- **Methods and Process:**  
-  Market research, user research, product structure design, embedded system development on Arduino Nano, voice interaction module integration, and motion behavior programming.
+#### **Methods and Process:**
+Conducted user and market research, redesigned the robot’s appearance and structure, and developed the embedded control system based on Arduino Nano.
+The project emphasized form control, motion behavior programming, and basic embedded development, including sensor reading, command parsing, state switching, and module coordination.
+It also established a complete interaction chain: user instruction input → multi-level sensing → onboard program response → corresponding module output, integrating perception, communication, and interaction into one coherent system.
 
-- **Outcome:**  
-  Developed an interactive toy robot that supports **voice interaction** and **ultrasonic distance sensing**, and is capable of adjusting its behaviors dynamically according to the child’s emotional state and interaction context.
+#### **Outcome:**
+Built an interactive toy robot prototype supporting voice interaction and ultrasonic distance sensing, capable of generating different motion and feedback behaviors under different interaction contexts.
+Its main strength lies in the relatively complete end-to-end pipeline from input, sensing, and processing to response output, making the robot more engaging and adaptive than conventional toys in a similar category.
 
-  - **Complete interaction pipeline:** voice input → signal reception → onboard processing → motion and emotional response output  
-    This end-to-end interaction loop forms the core strength of the product compared with other toys in a similar price range.
+![Robot-Project](assets/images/robotics.png)
 
 ---
 
