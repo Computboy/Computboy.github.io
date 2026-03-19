@@ -41,11 +41,14 @@ Redesigned the original Otto Basic platform into a companion-oriented interactiv
 
 #### **Methods and Process:**
 Conducted user and market research, redesigned the robot’s appearance and structure, and developed the embedded control system based on Arduino Nano.
+
 The project emphasized form control, motion behavior programming, and basic embedded development, including sensor reading, command parsing, state switching, and module coordination.
+
 It also established a complete interaction chain: user instruction input → multi-level sensing → onboard program response → corresponding module output, integrating perception, communication, and interaction into one coherent system.
 
 #### **Outcome:**
 Built an interactive toy robot prototype supporting voice interaction and ultrasonic distance sensing, capable of generating different motion and feedback behaviors under different interaction contexts.
+
 Its main strength lies in the relatively complete end-to-end pipeline from input, sensing, and processing to response output, making the robot more engaging and adaptive than conventional toys in a similar category.
 
 ![Robot-Project](assets/images/robotics.png)
