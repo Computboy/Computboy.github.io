@@ -19,16 +19,16 @@
   font-weight: 600;
 }
 
-/* =========================
-   Global font system
-   ========================= */
+/* 全站主字体改为更干净的无衬线 */
 :root {
-  --md-text-font: "Inter", "Noto Sans SC", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --md-code-font: "JetBrains Mono", "Fira Code", monospace;
+  --md-text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                  "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
+                  Arial, sans-serif;
+  --md-code-font: "JetBrains Mono", monospace;
   --site-accent-font: "TsangErKai", "Noto Serif SC", serif;
 }
 
-/* 全站基础字体：改成更现代、更技术向 */
+/* 全站正文、导航、标题统一 */
 html,
 body,
 .md-typeset,
@@ -40,15 +40,14 @@ body,
   font-family: var(--md-text-font);
 }
 
-/* 正文阅读体验 */
+/* 正文 */
 .md-typeset {
   font-weight: 400;
   line-height: 1.78;
   letter-spacing: 0.01em;
-  text-rendering: optimizeLegibility;
 }
 
-/* 标题更利落一点，减少“软萌感” */
+/* 标题 */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
@@ -61,25 +60,7 @@ body,
   line-height: 1.3;
 }
 
-/* 首页主标题稍微更有学术主页感 */
-.md-typeset h1 {
-  font-size: 2.1em;
-  margin-bottom: 1.2rem;
-}
-
-.md-typeset h2 {
-  font-size: 1.45em;
-  margin-top: 2.2rem;
-  margin-bottom: 0.9rem;
-}
-
-.md-typeset h3 {
-  font-size: 1.15em;
-  margin-top: 1.6rem;
-  margin-bottom: 0.6rem;
-}
-
-/* 导航、目录、站点标题统一更专业 */
+/* 导航和站点标题 */
 .md-header__title,
 .md-nav__title,
 .md-nav__link,
@@ -89,48 +70,19 @@ body,
   font-weight: 500;
 }
 
-/* 顶部站点名称稍微增强识别度 */
-.md-header__title {
-  letter-spacing: 0;
-}
-
-/* 侧边目录不要太轻 */
-.md-nav--secondary .md-nav__link {
-  font-weight: 450;
-}
-
-/* 段落与列表间距更舒服 */
-.md-typeset p,
-.md-typeset ul,
-.md-typeset ol {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-}
-
-/* 列表更适合技术主页 */
-.md-typeset li {
-  margin-bottom: 0.35em;
-}
-
-/* 粗体别太黑，避免显得笨重 */
+/* 强调文字 */
 .md-typeset strong {
   font-weight: 600;
 }
 
-/* 代码字体 */
+/* 代码 */
 code,
 kbd,
 pre {
   font-family: var(--md-code-font);
 }
 
-/* 表格文字也统一 */
-table,
-th,
-td {
-  font-family: var(--md-text-font);
-}
-
+/* 少量点缀时再用这个 */
 .accent-font {
   font-family: var(--site-accent-font);
 }
