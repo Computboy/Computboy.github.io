@@ -21,11 +21,11 @@
 
 /* 全站主字体改为更干净的无衬线 */
 :root {
-  --md-text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+  --md-text-font: "Segoe UI", "PingFang SC",
                   "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
                   Arial, sans-serif;
   --md-code-font: "JetBrains Mono", monospace;
-  --site-accent-font: "TsangErKai", "Noto Serif SC", serif;
+  --site-accent-font: "Noto Serif SC", serif;
 }
 
 /* 全站正文、导航、标题统一 */
