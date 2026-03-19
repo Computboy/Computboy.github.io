@@ -1,101 +1,142 @@
-# **欢迎来到 Computboy 的个人网站！**
+# Welcome to Computboy's Personal Website
 
-## 😌 关于我
+## About Me
 
-我是**浙江大学计算机科学与技术学院工业设计专业**在读本科生，致力于探索设计 × 技术的交叉领域。
-我的研究与创作聚焦于**计算机图形学**、**人工智能**与**智能产品设计**，目标是打造**更具智能性与视觉表现力的交互体验**。
+I am an undergraduate student majoring in **Industrial Design** at the **College of Computer Science and Technology, Zhejiang University**.  
+My work focuses on the intersection of **design, computation, and intelligent systems**, with particular interests in **Computer Graphics**, **Computer Vision**, and **Artificial Intelligence**.
 
-### 🎓 学术兴趣方向
+I am especially interested in building interactive systems that combine **visual computing**, **geometric understanding**, and **learning-based methods**, aiming to create digital experiences that are both technically robust and visually expressive.
 
-- 计算机图形学与实时渲染 Computer Graphics & Realtime Rendering
-- 技术美术与真实感渲染 Technical Art & Photorealistic Rendering
-- 基于智能硬件与软件平台的产品设计 Product Design based on Intelligent Hardware & Software Platforms
-- 以人为本的3D游戏设计 Human-Centered 3D Game Design
+### Research Interests
 
-### 📚 教育背景
+- **Computer Graphics & Real-Time Rendering**  
+  Rendering pipelines, lighting and shadowing, material appearance, real-time scene construction, and interactive 3D systems.
 
-- 浙江大学｜工业设计 本科（2024 – 至今）
+- **Computer Vision & 3D Visual Understanding**  
+  Image understanding, scene perception, geometric reasoning, 3D reconstruction, and vision-based interaction.
 
-    - 相关课程：设计思维，智能设计基础，计算机图形学，数据结构与算法基础
+- **Artificial Intelligence for Visual Computing**  
+  Deep learning for graphics and vision, generative models, multimodal understanding, and intelligent interactive systems.
 
----
-
-## 📓 我的项目
-### 01｜儿童陪伴型智能玩具机器人
-
-- **项目目标**：在原始Otto Basic基础上，对机器人的外形、机械结构、交互方式等进行升级优化，打造一款儿童陪伴型智能玩具机器人。
-- **方法路径**：市场分析、用户调研、产品结构设计、嵌入式系统（Arduino Nano板端）调试、语音交互模块与动作行为逻辑编程等。
-- **项目成果**：打通一款支持语音互动与超声波距离识别的的智能玩具，可根据儿童情绪状态动态调整行为与交互模式。
-
-    - <strong>完整交互链条产出：语音输入→信息接收→板端识别→动作与情绪化响应输出</strong>，是该产品相较于其他同价位玩具产品的**核心优势**。
-
-### 02｜基于 OpenGL 的 3D 场景实时渲染编辑器
-
-- <strong>项目目标：</strong>  
-设计并实现一个轻量级三维场景编辑与展示系统（mini editor / mini engine），面向课程作业与教学演示场景。系统需要支持：
-
-    1. 在同一程序内完成场景搭建与交互式编辑（对象放置、变换、参数调节）；
-    2. 提供稳定的**实时渲染视口（Viewport）**与基础相机漫游能力；
-    3. 在保证性能与结构清晰的前提下，引入真实感相关效果（光照、阴影、材质/纹理等），形成可用于展示与“可玩”的完整三维场景。
-
-- <strong>技术方法：</strong>  
-
-    1. <strong>语言与图形 API：</strong>采用 C++ 组织工程结构，使用 OpenGL 完成渲染管线搭建，并通过 Shader（GLSL）实现逐像素光照、纹理采样、阴影采样等核心视觉效果。
-    2. <strong>编辑器界面系统：</strong>使用 ImGui Docking 实现多窗口编辑器布局，将控制面板（参数调节）、渲染视口（实时画面）、日志/信息窗口分离，构建"编辑器式"工作流。
-    3. <strong>资源与渲染架构：</strong>通过 Model/Mesh 分层封装模型导入与渲染调用；使用 Assimp 支持 OBJ 等网格资源加载；使用 VAO/VBO 管理体素与网格数据；并对纹理绑定与状态切换进行封装（如默认纹理机制）以提高系统鲁棒性。
-    4. <strong>交互与可玩性扩展：</strong>在相机漫游基础上加入鼠标交互（如在视口中放置体素）与基础碰撞逻辑，构建简单迷宫场景模型，为用户提供"可探索"的游戏体验雏形。
-
-- <strong>项目成果：</strong>  
-最终完成了一个可运行的三维场景编辑器原型，具备从“建模—搭景—调参—展示”的完整闭环能力：
-
-    1. <strong>场景内容层面：</strong>既支持程序化体素几何生成（立方体/球体/柱体等），也支持外部 OBJ 模型导入与多网格渲染；
-    2. <strong>真实感渲染层面：</strong>支持材质与纹理显示，并可在面板中实时调节光源与渲染参数，从而直观观察光照/阴影/材质变化对视觉效果的影响；
-    3. <strong>应用价值层面：</strong>该系统可用于图形学课程教学（展示渲染流程与效果对比）、作业演示与快速原型验证（快速搭建小场景并实时调试渲染效果），同时具备进一步扩展为更完整编辑器/小游戏框架的基础。
+- **Human-Centered Intelligent Product Design**  
+  Designing products and interfaces that integrate embedded systems, perception, and intelligent behaviors.
 
 ---
 
-## 📘 课程笔记与技术分享
-### 《智能设计基础》
+## Education
 
-在此板块中，我将分享浙江大学计算机学院专业课《智能设计基础》课程的学习笔记，重点关注AI 算法在设计场景中的应用，包括：
+- **Zhejiang University** | B.Eng. in Industrial Design *(2024 – Present)*
 
-1. 介绍Python基础，并结合机器学习领域进行拓展；
-
-    - <strong>Python基础：</strong>涵盖基本语法、变量、函数与参数、面向对象特性、错误调试等；
-    - <strong>Python在机器学习中的运用：</strong>NumPy，Pandas，Matplotlib，Torch等。
-
-2. 梳理人工智能的起源、发展脉络，介绍人工智能技术在设计领域的具体运用；
-
-    - <strong>基础概念梳理：</strong>人工智能的概念、流派、发展历程；
-    - <strong>大语言模型初步：</strong>生成式人工智能Token，Embedding等概念的理解，掌握其信息处理的基本方法；
-    - <strong>设计结合：</strong>人工智能在设计领域的作用。
-
-3. 讲解机器学习与深度学习的基础知识，从经典的回归与分类任务入手，依次介绍决策树、K-Means聚类、SVM等传统算法，再过渡到人工神经网络、CNN等深度学习模型，重点放在概念理解与Python代码实践。
-
-    - <strong>经典机器学习算法：</strong>涵盖决策树、支持向量机、K-Means聚类、逻辑回归与线性回归模型；
-    - <strong>模型评估与优化策略：</strong>过拟合、欠拟合、正则化、数据增强等；
-    - <strong>深度学习基础：</strong>神经网络、CNN、激活函数辨析、梯度下降算法等。
-
-4. 介绍生成模型的相关内容，主要包括当前主流的图像生成模型（如VAE、GAN、Diffusion、Flow Matching）以及音频生成模型的基本原理与应用。
-
-5. 讲解智能体协作相关内容，包括Agent的基本概念、架构设计及应用。
+  **Relevant Coursework:**  
+  Design Thinking, Fundamentals of Intelligent Design, Computer Graphics, Data Structures and Algorithms
 
 ---
 
-## 💪🏼 技能栈
+## Projects
 
-- **设计工具**：Adobe 系列（Photoshop / Illustrator / XD）、Rhino、KeyShot、Figma  
-- **图形与编程**：OpenGL、GLSL、Python、C++、HTML / CSS  
-- **AI 与数据分析**：PyTorch（基础）、Scikit-learn、NumPy、Pandas、Matplotlib  
-- **原型制作**：3D 打印、嵌入式系统调试
+### 01 | Companion Robot for Children
+
+- **Project Goal:**  
+  Based on the original Otto Basic platform, this project redesigned and upgraded the robot’s appearance, mechanical structure, and interaction logic to create a companion-oriented intelligent toy robot for children.
+
+- **Methods and Process:**  
+  Market research, user research, product structure design, embedded system development on Arduino Nano, voice interaction module integration, and motion behavior programming.
+
+- **Outcome:**  
+  Developed an interactive toy robot that supports **voice interaction** and **ultrasonic distance sensing**, and is capable of adjusting its behaviors dynamically according to the child’s emotional state and interaction context.
+
+  - **Complete interaction pipeline:** voice input → signal reception → onboard processing → motion and emotional response output  
+    This end-to-end interaction loop forms the core strength of the product compared with other toys in a similar price range.
 
 ---
 
-## 📮 联系方式
+### 02 | OpenGL-Based Real-Time 3D Scene Rendering Editor
 
-- 📧 邮箱：wel_sun@zju.edu.cn
-- 💻 GitHub：github.com/Computboy
+- **Project Goal:**  
+  Designed and implemented a lightweight 3D scene editing and rendering system (a mini editor / mini engine) for course projects and demonstration purposes.  
+  The system was intended to support:
 
-*最后更新：2026 年 2 月*
+  1. Scene construction and interactive editing within one program, including object placement, transformation, and parameter adjustment;  
+  2. A stable **real-time rendering viewport** with basic camera navigation;  
+  3. Visually convincing rendering effects such as lighting, shadows, materials, and textures while maintaining a clear and extensible system structure.
 
-© 2026 Computboy. 保留所有权利。
+- **Technical Approach:**  
+
+  1. **Language and Graphics API:**  
+     Built in **C++** with **OpenGL** as the rendering backend, and implemented core visual effects using **GLSL shaders**, including per-pixel lighting, texture sampling, and shadow sampling.
+
+  2. **Editor Interface System:**  
+     Used **ImGui Docking** to build a multi-panel editor workflow, separating control panels, rendering viewport, and information/log windows.
+
+  3. **Resource and Rendering Architecture:**  
+     Organized the system with layered **Model/Mesh abstractions**; used **Assimp** to load external mesh assets such as OBJ models; managed geometry data with **VAO/VBO**; and encapsulated texture binding and rendering states to improve robustness.
+
+  4. **Interaction and Playability:**  
+     Added mouse-based interaction inside the viewport, including voxel placement and basic collision logic, enabling a simple explorable 3D maze-like scene.
+
+- **Outcome:**  
+  Completed a functional prototype of a 3D scene editor with a full workflow from **scene construction** to **parameter tuning** and **visual presentation**:
+
+  1. **Scene Content:**  
+     Supports both procedural voxel geometry generation (cube, sphere, cylinder, etc.) and external OBJ model import with multi-mesh rendering.
+
+  2. **Rendering Capability:**  
+     Supports materials and textures, while allowing real-time adjustment of light sources and rendering parameters to observe changes in appearance directly.
+
+  3. **Application Value:**  
+     The system can be used for graphics education, rendering pipeline demonstrations, assignment presentations, and rapid prototyping.  
+     It also provides a foundation for future expansion toward a more complete editor, simulation tool, or small game framework.
+
+---
+
+## Notes and Technical Writing
+
+### Fundamentals of Intelligent Design
+
+In this section, I share my study notes from the course **Fundamentals of Intelligent Design** at Zhejiang University, with an emphasis on how AI methods can be applied in design and visual computing contexts.
+
+The topics include:
+
+1. **Python Fundamentals and Practical Computing for AI**
+   - Basic Python syntax, variables, functions, object-oriented programming, and debugging
+   - Practical tools commonly used in machine learning, such as **NumPy**, **Pandas**, **Matplotlib**, and **PyTorch**
+
+2. **Foundations of Artificial Intelligence**
+   - The origins, paradigms, and historical development of AI
+   - Introductory concepts in generative AI, including **tokens**, **embeddings**, and representation learning
+   - The role of AI in computational design and interactive systems
+
+3. **Machine Learning and Deep Learning Basics**
+   - Classical methods such as decision trees, K-Means clustering, SVM, logistic regression, and linear regression
+   - Model evaluation and optimization strategies, including overfitting, underfitting, regularization, and data augmentation
+   - Neural networks, CNNs, activation functions, and gradient-based optimization
+
+4. **Generative Models**
+   - Core ideas behind **VAE**, **GAN**, **Diffusion Models**, and **Flow Matching**
+   - Their applications in image, audio, and content generation
+
+5. **Agent Systems and Collaboration**
+   - Basic concepts of intelligent agents
+   - Agent architectures and collaborative workflows
+
+In the long term, I hope to connect these foundations with research problems in **graphics, vision, and AI**, especially in areas such as **3D understanding**, **rendering-aware learning**, **generative visual content**, and **interactive intelligent systems**.
+
+---
+
+## Skills
+
+- **Graphics & Programming:** OpenGL, GLSL, C++, Python, HTML, CSS  
+- **AI & Data Analysis:** PyTorch (basic), Scikit-learn, NumPy, Pandas, Matplotlib  
+- **Prototyping & Hardware:** 3D printing, embedded system development and debugging
+- **Design Tools:** Adobe Photoshop, Illustrator, XD, Rhino, KeyShot, Figma
+
+---
+
+## Contact
+
+- **Email:** wel_sun@zju.edu.cn  
+- **GitHub:** github.com/Computboy
+
+*Last updated: March 2026*
+
+© 2026 Computboy. All rights reserved.
