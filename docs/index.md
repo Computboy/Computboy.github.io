@@ -100,26 +100,31 @@ In this section, I share my study notes from the course **Fundamentals of Intell
 The topics include:
 
 1. **Python Fundamentals and Practical Computing for AI**
-   - Basic Python syntax, variables, functions, object-oriented programming, and debugging
-   - Practical tools commonly used in machine learning, such as **NumPy**, **Pandas**, **Matplotlib**, and **PyTorch**
+
+    - Basic Python syntax, variables, functions, object-oriented programming, and debugging
+    - Practical tools commonly used in machine learning, such as **NumPy**, **Pandas**, **Matplotlib**, and **PyTorch**
 
 2. **Foundations of Artificial Intelligence**
-   - The origins, paradigms, and historical development of AI
-   - Introductory concepts in generative AI, including **tokens**, **embeddings**, and representation learning
-   - The role of AI in computational design and interactive systems
+
+    - The origins, paradigms, and historical development of AI
+    - Introductory concepts in generative AI, including **tokens**, **embeddings**, and representation learning
+    - The role of AI in computational design and interactive systems
 
 3. **Machine Learning and Deep Learning Basics**
-   - Classical methods such as decision trees, K-Means clustering, SVM, logistic regression, and linear regression
-   - Model evaluation and optimization strategies, including overfitting, underfitting, regularization, and data augmentation
-   - Neural networks, CNNs, activation functions, and gradient-based optimization
+
+    - Classical methods such as decision trees, K-Means clustering, SVM, logistic regression, and linear regression
+    - Model evaluation and optimization strategies, including overfitting, underfitting, regularization, and data augmentation
+    - Neural networks, CNNs, activation functions, and gradient-based optimization
 
 4. **Generative Models**
-   - Core ideas behind **VAE**, **GAN**, **Diffusion Models**, and **Flow Matching**
-   - Their applications in image, audio, and content generation
+
+    - Core ideas behind **VAE**, **GAN**, **Diffusion Models**, and **Flow Matching**
+    - Their applications in image, audio, and content generation
 
 5. **Agent Systems and Collaboration**
-   - Basic concepts of intelligent agents
-   - Agent architectures and collaborative workflows
+
+    - Basic concepts of intelligent agents
+    - Agent architectures and collaborative workflows
 
 In the long term, I hope to connect these foundations with research problems in **graphics, vision, and AI**, especially in areas such as **3D understanding**, **rendering-aware learning**, **generative visual content**, and **interactive intelligent systems**.
 
