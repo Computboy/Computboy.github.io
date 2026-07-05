@@ -1,0 +1,20 @@
+[project]
+site_name = "Computboy's Personal Site (On construction)"
+site_url = "https://computboy.github.io/"
+site_description = "Computboy's personal site for projects, research interests, notes, and technical writing."
+site_author = "Computboy"
+copyright = "Copyright &copy; 2026 Computboy. All rights reserved."
+
+nav = [
+  { "Home" = "index.md" },
+]
+
+extra_css = [
+  "assets/css/extra.css",
+]
+
+[project.theme]
+language = "en"
+
+[project.plugins.search]
+
