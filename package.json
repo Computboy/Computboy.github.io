@@ -1,0 +1,9 @@
+{
+  "name": "computboy-zensical-site",
+  "private": true,
+  "dependencies": {
+    "@fontsource-variable/noto-sans-sc": "^5.2.10",
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "geist": "^1.7.2"
+  }
+}

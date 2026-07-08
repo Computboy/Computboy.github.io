@@ -1,49 +1,44 @@
+/*
+ * Typography
+ * Font files are self-hosted from the npm packages declared in package.json.
+ * Noto Sans SC stays available as an opt-in dependency; the default Chinese
+ * stack uses local system fonts to keep the initial page weight small.
+ */
 @font-face {
-  font-family: "Constan";
-  src: url("../fonts/constan.woff2") format("woff2");
-  font-weight: 400;
+  font-family: "Geist";
+  src: url("../fonts/geist-variable.woff2") format("woff2");
   font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Constan";
-  src: url("../fonts/constanb.woff2") format("woff2");
-  font-weight: 700;
+  font-family: "JetBrains Mono";
+  src: url("../fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2");
   font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
 
-/* 如果你还想保留藏尔楷，可以先不删 */
 @font-face {
-  font-family: "TsangErKai";
-  src: url("../fonts/TsangEr-W02.woff2") format("woff2");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "TsangErKai";
-  src: url("../fonts/TsangEr-W03.woff2") format("woff2");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "TsangErKai";
-  src: url("../fonts/TsangEr-W04.woff2") format("woff2");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "TsangErKai";
-  src: url("../fonts/TsangEr-W05.woff2") format("woff2");
+  font-family: "JetBrains Mono";
+  src: url("../fonts/jetbrains-mono-latin-600-normal.woff2") format("woff2");
+  font-style: normal;
   font-weight: 600;
+  font-display: swap;
 }
 
-/* 全站主字体改为 Constan */
 :root {
-  --md-text-font: "Constan", "Segoe UI", "PingFang SC",
-                  "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC",
-                  Arial, sans-serif;
-  --md-code-font: "JetBrains Mono", monospace;
-  --site-accent-font: "TsangErKai", "Noto Serif SC", serif;
+  --font-sans: "Geist", "Microsoft YaHei", "PingFang SC",
+    "Hiragino Sans GB", "Noto Sans CJK SC", "Segoe UI", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas,
+    "Liberation Mono", monospace;
+
+  /* Zensical / Material theme font hooks. */
+  --md-text-font: var(--font-sans);
+  --md-code-font: var(--font-mono);
 }
 
-/* 全站正文、导航、标题统一 */
 html,
 body,
 .md-typeset,
@@ -52,52 +47,62 @@ body,
 .md-tabs,
 .md-search,
 .md-footer {
-  font-family: var(--md-text-font);
+  font-family: var(--font-sans);
 }
 
-/* 正文 */
+body,
 .md-typeset {
   font-weight: 400;
   line-height: 1.78;
-  letter-spacing: 0.01em;
 }
 
-/* 标题 */
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
 .md-typeset h4,
 .md-typeset h5,
-.md-typeset h6 {
-  font-family: var(--md-text-font);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+.md-typeset h6,
+.md-nav__title {
+  font-family: var(--font-sans);
+  font-weight: 650;
+  line-height: 1.25;
 }
 
-/* 导航和站点标题 */
-.md-header__title,
-.md-nav__title,
 .md-nav__link,
 .md-tabs__link,
-.md-search__input {
-  font-family: var(--md-text-font);
+.md-search__input,
+.project-card,
+.project-card h3 {
+  font-family: var(--font-sans);
+}
+
+.project-tags,
+.project-meta,
+.md-typeset code,
+.md-typeset kbd,
+.md-typeset pre,
+.md-typeset pre code {
+  font-family: var(--font-mono);
+  font-variant-ligatures: none;
+}
+
+.project-tags,
+.project-meta {
+  letter-spacing: -0.01em;
+}
+
+.project-tags {
+  font-weight: 500;
+}
+
+.project-meta,
+.md-typeset code,
+.md-typeset kbd,
+.md-typeset pre,
+.md-typeset pre code {
   font-weight: 400;
 }
 
-/* 强调文字 */
 .md-typeset strong {
-  font-weight: 700;
-}
-
-/* 代码 */
-code,
-kbd,
-pre {
-  font-family: var(--md-code-font);
-}
-
-/* 少量点缀时再用这个 */
-.accent-font {
-  font-family: var(--site-accent-font);
+  font-weight: 650;
 }

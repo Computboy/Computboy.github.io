@@ -1,6 +1,9 @@
 # Zensical build output
 site/
 
+# Node dependencies used to source self-hosted web fonts
+node_modules/
+
 # Python environments and caches
 .venv/
 venv/
@@ -22,4 +25,3 @@ __pycache__/
 .DS_Store
 Thumbs.db
 Desktop.ini
-
